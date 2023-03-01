@@ -1,0 +1,17 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Patient List</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{patient.lastname}}, {{patient.name}}</li>
+    </ol>
+</nav>
+
+<div class="cards">
+    <div class="cards__column">
+        <app-patient-data-card [patient]="patient"></app-patient-data-card>
+        <app-appointments-card></app-appointments-card>
+    </div>
+    <div class="cards__column">
+        <app-notes-card></app-notes-card>
+        <app-documents-card></app-documents-card>
+    </div>
+</div>

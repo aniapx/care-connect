@@ -1,0 +1,58 @@
+:root {
+    --primary-color-1: #{$primary-color-light-1};
+    --primary-color-2: #{$primary-color-light-2};
+    --primary-color-3: #{$primary-color-light-3};
+    --primary-color-4: #{$primary-color-light-4};
+    --primary-color-5: #{$primary-color-light-5};
+    --primary-color-6: #{$primary-color-light-6};
+    --primary-color-7: #{$primary-color-light-7};
+    --primary-color-8: #{$primary-color-light-8};
+
+    --secondary-color-1: #{$secondary-color-light-1};
+    --secondary-color-2: #{$secondary-color-light-2};
+    --secondary-color-3: #{$secondary-color-light-3};
+    --secondary-color-4: #{$secondary-color-light-4};
+    --secondary-color-5: #{$secondary-color-light-5};
+    --secondary-color-6: #{$secondary-color-light-6};
+    --secondary-color-7: #{$secondary-color-light-7};
+    --secondary-color-8: #{$secondary-color-light-8};
+
+    --background-color-1: #{$background-color-light-1};
+    --background-color-2: #{$background-color-light-2};
+
+    --neutral-color-1: #{$neutral-color-1};
+    --neutral-color-2: #{$neutral-color-2};
+    --neutral-color-3: #{$neutral-color-3};
+    --neutral-color-4: #{$neutral-color-4};
+    --neutral-color-5: #{$neutral-color-5};
+    --neutral-color-6: #{$neutral-color-6};
+    --neutral-color-7: #{$neutral-color-7};
+
+    --font-size-body: #{$font-size-body};
+    --font-size-logo: #{$font-size-logo};
+    --font-size-icon: calc(#{$font-size-body} * 1.5);
+    --font-size-giant: calc(#{$font-size-header} * 2);
+    --font-size-h1: #{$font-size-header};
+    --font-size-h2: calc(#{$font-size-header} * 0.9);
+    --font-size-h3: calc(#{$font-size-header} * 0.5);
+    --font-size-note: calc(#{$font-size-body} * 0.75);
+
+    --font-weight-ultralight: #{$font-weight-ultralight};
+    --font-weight-thin: #{$font-weight-thin};
+    --font-weight-light: #{$font-weight-light};
+    --font-weight-regular: #{$font-weight-regular};
+    --font-weight-semibold: #{$font-weight-semibold};
+    --font-weight-bold: #{$font-weight-bold};
+    --font-weight-heavy: #{$font-weight-heavy};
+    --font-weight-black: #{$font-weight-black};
+
+    --base-spacing: #{$base-padding};
+
+    @include media('md') {
+        --font-size-giant: calc(#{$font-size-header} * 4);
+    }
+
+    @include media('xl') {
+        --font-size-giant: calc(#{$font-size-header} * 6);
+    }
+}

@@ -1,0 +1,52 @@
+options:
+    formatter: stylish
+    merge-default-rules: true
+    max-warnings: 5
+files:
+    include: 'src/**/*.s+(a|c)ss'
+    exclude: 'node_modules/*'
+
+rules:
+# LIFECARE RULES
+    # property-sort-order: 0
+    variable-name-format:
+        - 1
+        - convention: camelcase
+    indentation:
+        - 1
+        - size: 4
+    quotes:
+        - 1
+        - style: single
+    nesting-depth:
+        - 1
+        - max-depth: 3
+
+# CUSTOM RULES
+    bem-depth:
+        - 1
+        - max-depth: 2
+    class-name-format:
+        - 1
+        - convention: hyphenatedbem
+    clean-import-paths:
+        - 1
+        - leading-underscore: false
+        - filename-extension: false
+    empty-line-between-blocks:
+        - 1
+        - include: true
+        - allow-single-line-rulesets: false
+    no-mergeable-selectors:
+        - 1
+    no-misspelled-properties:
+        - 1
+    one-declaration-per-line:
+        - 1
+    property-sort-order:
+        - 1
+        - order: 'smacss'
+    pseudo-element:
+        - 1
+    single-line-per-selector:
+        - 1

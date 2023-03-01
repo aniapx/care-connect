@@ -1,0 +1,5 @@
+Doctor profile page: 
+This page displays detailed information about a particular doctor, including their name, photo, specialty, qualifications, experience, availability, and patient reviews.
+
+Profile page: 
+This page allows users to manage their account settings, update their personal and contact information, and change their password.

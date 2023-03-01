@@ -1,0 +1,3 @@
+Admin dashboard page:
+This page provides an overview of the system's usage statistics, user activity logs, and other metrics. 
+It also allows the system administrator to manage users, doctors, appointments, and other data.

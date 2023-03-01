@@ -1,0 +1,24 @@
+@import '../../../styles/2.tools/media-queries';
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: var(--base-spacing);
+    margin: 16px;
+
+    &__card {
+        // width: 100%;
+    }
+
+    @include media('md') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('lg') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('xl') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "clinics": [
+        {
+            "id": 1,
+            "name": "General Hospital",
+            "address": "123 Main St",
+            "phone": "(123) 456-7890"
+        },
+        {
+            "id": 2,
+            "name": "Dental Clinic",
+            "address": "456 Oak St",
+            "phone": "(555) 555-5555"
+        }
+    ],
+    "doctors": [
+        {
+            "id": 1,
+            "name": "Dr. Smith",
+            "specialty": "Cardiology",
+            "clinicId": 1
+        },
+        {
+            "id": 2,
+            "name": "Dr. Johnson",
+            "specialty": "Dentistry",
+            "clinicId": 2
+        }
+    ],
+    "appointments": [
+        {
+            "id": 1,
+            "doctorId": 1,
+            "date": "2022-03-01T08:00:00.000Z",
+            "patientName": "John Doe",
+            "notes": "Initial consultation"
+        },
+        {
+            "id": 2,
+            "doctorId": 2,
+            "date": "2022-03-02T14:00:00.000Z",
+            "patientName": "Jane Smith",
+            "notes": ""
+        }
+    ]
+}

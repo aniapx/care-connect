@@ -1,0 +1,65 @@
+.widget__content {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+}
+
+.today-appointments__left {
+    width: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.today-appointments__number {
+    font-size: 48px;
+    color: var(--neutral-color-4);
+}
+
+.today-appointments__right {
+    flex-grow: 2;
+}
+
+.today-appointments__count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.today-appointments__slots {
+    display: flex;
+    flex-direction: column;
+}
+
+.today-appointments__slot {
+    background-color: var(--primary-color-8);
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.slot {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(2, 1fr);
+
+    &__title {
+        grid-column: 1;
+        grid-row: 1;
+        font-weight: var(--font-weight-bold);
+    }
+
+    &__patient {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 14px;
+    }
+
+    &__time {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        font-size: 12px;
+    }
+}

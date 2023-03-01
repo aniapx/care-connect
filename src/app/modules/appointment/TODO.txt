@@ -1,0 +1,6 @@
+Appointment booking page: 
+This page allows users to schedule an appointment with a doctor by selecting the date, time, and type of appointment. 
+Users can also choose to receive appointment reminders and notifications.
+
+Appointment confirmation page: 
+This page confirms the details of the user's appointment and provides instructions for preparing for the visit.

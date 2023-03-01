@@ -1,0 +1,3 @@
+Search page: 
+This page allows users to search for doctors based on their specialty, location, availability, and other criteria. 
+The search results can be filtered and sorted to help users find the right doctor.

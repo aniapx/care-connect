@@ -1,0 +1,243 @@
+@import '../../../../../styles/2.tools/media-queries';
+
+:host {
+    height: 100%;
+    display: block;
+}
+
+.patients-table {
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 14px;
+    height: 100%;
+}
+
+.patient-table-options {
+    padding: 8px 16px;
+    border-bottom: 1px solid #dee5f1;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    color: var(--neutral-color-4);
+    font-weight: var(--font-weight-bold);
+
+    @include media('md') {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
+
+        &>div:first-child {
+            padding-right: 8px;
+
+            @include media('md') {
+                padding-right: 32px;
+            }
+        }
+    }
+
+    &__right {
+        button:not(:first-child) {
+            margin-left: 8px;
+        }
+    }
+}
+
+.patients-count {
+    border-right: 1px solid #dee5f1;
+    display: flex;
+    align-items: center;
+
+    &__number {
+        font-size: 24px;
+        margin-right: 6px;
+        color: var(--primary-color-1);
+    }
+}
+
+.patients-table-wrapper {
+    display: flex;
+    padding: 0 16px;
+}
+
+.patients-table-body {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+
+    th {
+        background-color: #f2f5fa;
+        padding: 8px;
+        color: #999;
+        font-size: 14px;
+        vertical-align: middle;
+        font-weight: var(--font-weight-bold);
+
+        &:first-child {
+            padding-left: 16px;
+        }
+
+        &:last-child {
+            padding-right: 16px;
+        }
+    }
+
+    tr {
+        background-color: var(--background-color-1);
+        border-radius: 8px;
+
+        &:hover {
+            background-color: var(--background-color-2);
+        }
+    }
+
+    td {
+        padding: 8px;
+        vertical-align: middle;
+
+        &:first-child {
+            padding-left: 16px;
+            border-radius: 4px 0 0 4px;
+        }
+
+        &:last-child {
+            padding-right: 16px;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+
+    input[type="checkbox"] {
+        margin: auto;
+        vertical-align: middle;
+    }
+}
+
+.header {
+
+    &__checkbox,
+    &__options {
+        width: 16px;
+        padding: 16px;
+    }
+
+    &__basic,
+    &__number {
+        display: table-cell;
+    }
+
+    &__next-appt {
+        display: none;
+
+        @include media('md') {
+            display: table-cell;
+        }
+    }
+
+    &__city {
+        display: none;
+
+        @include media('lg') {
+            display: table-cell;
+        }
+    }
+
+    &__last-appt,
+    &__registration {
+        display: none;
+
+        @include media('xl') {
+            display: table-cell;
+        }
+    }
+}
+
+.data {
+
+    &__checkbox,
+    &__options {
+        width: 16px;
+    }
+
+    &__basic,
+    &__number {
+        display: table-cell;
+    }
+
+    &__next-appt {
+        display: none;
+
+        @include media('md') {
+            display: table-cell;
+        }
+    }
+
+    &__city {
+        display: none;
+
+        @include media('lg') {
+            display: table-cell;
+        }
+    }
+
+    &__last-appt,
+    &__registration {
+        display: none;
+
+        @include media('xl') {
+            display: table-cell;
+        }
+    }
+
+    &__basic {
+        display: grid;
+        grid-template-columns: 48px auto;
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 8px;
+
+        &__picture {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            background-color: #ccc;
+            border-radius: 50%;
+            height: 44px;
+            width: 44px;
+            margin: auto;
+        }
+
+        &__name {
+            font-weight: bold;
+            align-self: center;
+        }
+
+        &__email {
+            color: var(--neutral-color-4);
+            font-size: 12px;
+            align-self: center;
+        }
+    }
+
+    &__options {
+        .dropdown-menu {
+            border: none;
+            box-shadow: 2px 2px 8px #ddd;
+
+            button {
+                color: var(--neutral-color-4);
+                font-size: 13px;
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+    }
+}

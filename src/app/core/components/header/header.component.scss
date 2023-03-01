@@ -1,0 +1,21 @@
+header {
+    height: 100%;
+    padding: 0 calc(var(--base-spacing) * 3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f5fa;
+    border-bottom: 1px solid var(--neutral-color-6);
+    font-size: 18px;
+    font-weight: var(--font-weight-heavy);
+
+    &>div {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+    }
+}
+
+.icon {
+    color: var(--primary-color-1);
+}

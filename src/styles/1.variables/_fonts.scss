@@ -1,0 +1,84 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    /* Light */
+    font-weight: 100;
+    src: local('SF UI Display Ultralight'), local('sfuidisplay-ultralight'), url("../../assets/fonts/sf-ui-display-ultralight.otf") format('opentype')
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    /* Light */
+    font-weight: 200;
+    src: local('SF UI Display Thin'), local('sfuidisplay-thin'), url("../../assets/fonts/sf-ui-display-thin.otf") format('opentype')
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    /* Light */
+    font-weight: 300;
+    src: local('SF UI Display Light'), local('sfuidisplay-light'), url("../../assets/fonts/sf-ui-display-light.otf") format('opentype')
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    /* Light */
+    font-weight: 400;
+    src: local('SF UI Display Medium'), local('sfuidisplay-medium'), url("../../assets/fonts/sf-ui-display-medium.otf") format('opentype')
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    /* Light */
+    font-weight: 500;
+    src: local('SF UI Display Semibold'), local('sfuidisplay-semibold'), url("../../assets/fonts/sf-ui-display-semibold.otf") format('opentype')
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    /* Light */
+    font-weight: 600;
+    src: local('SF UI Display Bold'), local('sfuidisplay-bold'), url("../../assets/fonts/sf-ui-display-bold.otf") format('opentype')
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    /* Light */
+    font-weight: 700;
+    src: local('SF UI Display Heavy'), local('sfuidisplay-heavy'), url("../../assets/fonts/sf-ui-display-heavy.otf") format('opentype')
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    /* Light */
+    font-weight: 800;
+    src: local('SF UI Display Black'), local('sfuidisplay-black'), url("../../assets/fonts/sf-ui-display-black.otf") format('opentype')
+}
+
+
+$primary-font: 'SF UI Display', sans-serif;
+
+$font-weight-ultralight: 100;
+$font-weight-thin: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
+$font-weight-heavy: 700;
+$font-weight-black: 800;
+
+$font-size-giant: 4rem;
+$font-size-header: 2rem;
+$font-size-logo: 2rem;
+$font-size-body: 1rem;
+$font-size-note: 0.8rem;

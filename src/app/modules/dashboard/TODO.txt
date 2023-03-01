@@ -1,0 +1,2 @@
+Dashboard page: 
+This page provides an overview of the user's upcoming appointments, as well as options to search for doctors, book appointments, and view their medical history.

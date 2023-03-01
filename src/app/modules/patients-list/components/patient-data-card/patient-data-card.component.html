@@ -1,0 +1,57 @@
+<div class="card">
+    <div class="card__content patient">
+        <div class="patient__left">
+            <div class="patient__image"></div>
+            <div class="patient__name">{{patient.lastname}}, {{patient.name}}</div>
+            <div class="patient__email">{{patient.email}}</div>
+            <div class="patient__appointments">
+                <div class="patient__appointments__past">
+                    <span>16</span>
+                    <span>Past</span>
+                </div>
+                <div class="divider divider--vertical"></div>
+                <div class="patient__appointments__upcoming">
+                    <span>2</span>
+                    <span>Upcoming</span>
+                </div>
+            </div>
+            <button class="btn btn--secondary patient__send-message">Send message</button>
+        </div>
+        <div class="patient__right data">
+            <div>
+                <span>Gender</span>
+                <span>{{patient.gender}}</span>
+            </div>
+            <div>
+                <span>Birthday</span>
+                <span>{{patient.birthDate | date:'dd.MM.yyyy'}}</span>
+            </div>
+            <div>
+                <span>Phone Number</span>
+                <span>{{patient.phoneNumber}}</span>
+            </div>
+            <div>
+                <span>Street</span>
+                <span>
+                    {{patient.address.street}} {{patient.address.houseNumber}}/{{patient.address.flatNumber ?? ''}}
+                </span>
+            </div>
+            <div>
+                <span>City</span>
+                <span>{{patient.address.city}}</span>
+            </div>
+            <div>
+                <span>ZIP Code</span>
+                <span>{{patient.address.zipCode}}</span>
+            </div>
+            <div>
+                <span>Membership</span>
+                <span>{{patient.membershipStatus ? 'Active' : 'Inactive'}}</span>
+            </div>
+            <div>
+                <span>Registered date</span>
+                <span>{{patient.registrationDate | date:'dd.MM.yyyy'}}</span>
+            </div>
+        </div>
+    </div>
+</div>

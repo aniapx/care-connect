@@ -1,0 +1,19 @@
+<nav class="navigation">
+    <div class="navigation__logo">
+        <i class="fa-solid fa-user-doctor"></i>
+        <span>CareConnect</span>
+    </div>
+    <div class="navigation__links">
+        <a *ngFor="let route of routes" class="navigation__link" [routerLink]="route.link">
+            <i class="{{route.icon}}"></i>
+            <span>{{route.title}}</span>
+        </a>
+    </div>
+    <div class="navigation__profile">
+        <i class="fa-solid fa-id-card-clip"></i>
+        <div class="profile__data">
+            <span class="profile__name">Name Name</span>
+            <span class="profile__occupation">Occupation</span>
+        </div>
+    </div>
+</nav>

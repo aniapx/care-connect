@@ -1,0 +1,14 @@
+@import '../../../../../styles/2.tools/media-queries';
+
+.card {
+    overflow: hidden;
+    height: fit-content;
+
+    @include media('md') {
+        height: 300px;
+    }
+}
+
+.card__content {
+    overflow: auto;
+}

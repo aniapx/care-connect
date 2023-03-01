@@ -1,0 +1,42 @@
+@import '../styles/2.tools/media-queries';
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: calc(var(--base-spacing) * 8) auto 56px;
+
+    grid-template-areas:
+        "header"
+        "main"
+        "navigation";
+
+    max-width: unset;
+    padding: 0;
+
+    @include media('md') {
+        grid-template-columns: 260px auto;
+        grid-template-rows: calc(var(--base-spacing) * 8) auto;
+
+        grid-template-areas:
+            "navigation header"
+            "navigation main";
+    }
+}
+
+app-header {
+    grid-area: header;
+}
+
+app-navigation {
+    grid-area: navigation;
+}
+
+main {
+    grid-area: main;
+    background-color: #f2f5fa;
+    // padding: calc(var(--base-spacing) * 2);
+}
+
+router-outlet {
+    display: none;
+}

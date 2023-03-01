@@ -1,0 +1,17 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background-color-1);
+    color: var(--neutral-color-3);
+    font-family: $primary-font;
+}
+
+.container {
+    .layout__content {
+        flex-grow: 1;
+    }
+}

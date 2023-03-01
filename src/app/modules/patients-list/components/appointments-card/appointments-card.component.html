@@ -1,0 +1,83 @@
+<div class="card">
+    <div class="card__header">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <button class="nav-link" [ngClass]="{'active': activeTab === 'upcoming'}"
+                    (click)="onTabClick('upcoming')">Upcoming Appointments</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" [ngClass]="{'active': activeTab === 'past'}" (click)="onTabClick('past')">Past
+                    Appointments</button>
+            </li>
+        </ul>
+    </div>
+    <div class="card__content timeline">
+        <div class="timeline__header">
+            <h2>Root Canal Treatment</h2>
+            <button class="btn btn--secondary">
+                <i class="fa-solid fa-chevron-up"></i>
+                Show Previous Treatment
+            </button>
+        </div>
+        <div class="timeline__content">
+            <ul>
+                <li class="timeline__item ">
+                    <div class="timeline__item__icon"><span></span></div>
+                    <div class="appointment">
+                        <div class="appointment__date">
+                            <span>{{'2019-11-26' | date:'dd MMM yyyy'}}</span>
+                            <span>09:00 - 10:00</span>
+                        </div>
+                        <div class="divider divider--vertical"></div>
+                        <div class="appointment__data">
+                            <span class="appointment__data__label">Treatment</span>
+                            <span class="appointment__data__value">Open Access</span>
+                        </div>
+                        <div class="divider divider--vertical"></div>
+                        <div class="appointment__data">
+                            <span class="appointment__data__label">Doctor</span>
+                            <span class="appointment__data__value">Dr. Adam Hodge</span>
+                        </div>
+                        <div class="divider divider--vertical"></div>
+                        <div class="appointment__data">
+                            <span class="appointment__data__label">Nurse</span>
+                            <span class="appointment__data__value">Mary White</span>
+                        </div>
+                        <button class="btn">
+                            <i class="fa-solid fa-file-lines"></i>
+                            Note
+                        </button>
+                    </div>
+                </li>
+                <li class="timeline__item ">
+                    <div class="timeline__item__icon"><span></span></div>
+                    <div class="appointment">
+                        <div class="appointment__date">
+                            <span>{{'2019-11-26' | date:'dd MMM yyyy'}}</span>
+                            <span>09:00 - 10:00</span>
+                        </div>
+                        <div class="divider divider--vertical"></div>
+                        <div class="appointment__data">
+                            <span class="appointment__data__label">Treatment</span>
+                            <span class="appointment__data__value">Open Access</span>
+                        </div>
+                        <div class="divider divider--vertical"></div>
+                        <div class="appointment__data">
+                            <span class="appointment__data__label">Doctor</span>
+                            <span class="appointment__data__value">Dr. Adam Hodge</span>
+                        </div>
+                        <div class="divider divider--vertical"></div>
+                        <div class="appointment__data">
+                            <span class="appointment__data__label">Nurse</span>
+                            <span class="appointment__data__value">Mary White</span>
+                        </div>
+                        <button class="btn">
+                            <i class="fa-solid fa-file-lines"></i>
+                            Note
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.widget__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.widget__count {
+    color: var(--neutral-color-4);
+    font-size: 32px;
+}

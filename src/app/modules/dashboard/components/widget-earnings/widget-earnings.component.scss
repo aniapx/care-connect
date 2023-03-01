@@ -1,0 +1,20 @@
+.widget__content--horizontal {
+    display: flex;
+    flex-direction: column;
+}
+
+.widget__number {
+    font-size: 32px;
+}
+
+.widget__label {
+    margin-top: 4px;
+    font-size: 14px;
+    color: var(--neutral-color-5);
+}
+
+.widget__divider {
+    height: 1px;
+    background-color: var(--neutral-color-5);
+    margin: 12px 0;
+}
