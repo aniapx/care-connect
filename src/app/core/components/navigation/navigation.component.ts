@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  public routes: { title: string, link: string, icon: string }[] = [
-    { title: 'Home', link: '', icon: 'fa-solid fa-house' },
-    { title: 'Calendar', link: '', icon: 'fa-solid fa-calendar' },
-    { title: 'Patients list', link: '/patients-list', icon: 'fa-solid fa-user' },
-    { title: 'Messages', link: '', icon: 'fa-solid fa-message' },
-    { title: 'Finances', link: '', icon: 'fa-solid fa-wallet' },
-    { title: 'Settings', link: '', icon: 'fa-solid fa-gear' },
+  public routes: { title: string, link: string, icon: string, isMobile: boolean }[] = [
+    { title: 'Home', link: '', icon: 'fa-solid fa-house', isMobile: true },
+    { title: 'Calendar', link: '', icon: 'fa-solid fa-calendar', isMobile: true },
+    { title: 'Patients list', link: '/patients-list', icon: 'fa-solid fa-user', isMobile: false },
+    { title: 'Messages', link: '', icon: 'fa-solid fa-message', isMobile: true },
+    { title: 'Finances', link: '', icon: 'fa-solid fa-wallet', isMobile: false },
+    { title: 'Settings', link: '', icon: 'fa-solid fa-gear', isMobile: true },
   ];
 }
