@@ -17,8 +17,8 @@
     --secondary-color-7: #{$secondary-color-light-7};
     --secondary-color-8: #{$secondary-color-light-8};
 
-    --background-color-1: #{$background-color-light-1};
-    --background-color-2: #{$background-color-light-2};
+    --background-color-1: #{$background-color-light-mobile-1};
+    --background-color-2: #{$background-color-light-mobile-2};
 
     --neutral-color-1: #{$neutral-color-1};
     --neutral-color-2: #{$neutral-color-2};
@@ -27,6 +27,7 @@
     --neutral-color-5: #{$neutral-color-5};
     --neutral-color-6: #{$neutral-color-6};
     --neutral-color-7: #{$neutral-color-7};
+    --neutral-color-8: #{$neutral-color-8};
 
     --font-size-body: #{$font-size-body};
     --font-size-logo: #{$font-size-logo};
@@ -47,6 +48,12 @@
     --font-weight-black: #{$font-weight-black};
 
     --base-spacing: #{$base-padding};
+
+    
+    @include media('sm') {
+        --background-color-1: #{$background-color-light-1};
+        --background-color-2: #{$background-color-light-2};
+    }
 
     @include media('md') {
         --font-size-giant: calc(#{$font-size-header} * 4);

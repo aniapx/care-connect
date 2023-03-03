@@ -3,7 +3,7 @@
 .container {
     height: 100%;
     display: grid;
-    grid-template-rows: calc(var(--base-spacing) * 8) auto 56px;
+    grid-template-rows: calc(var(--base-spacing) * 6) auto 56px;
 
     grid-template-areas:
         "header"
@@ -13,7 +13,7 @@
     max-width: unset;
     padding: 0;
 
-    @include media('md') {
+    @include media('sm') {
         grid-template-columns: 80px auto;
         grid-template-rows: calc(var(--base-spacing) * 8) auto;
 
@@ -37,8 +37,7 @@ app-navigation {
 
 main {
     grid-area: main;
-    background-color: #f2f5fa;
-    // padding: calc(var(--base-spacing) * 2);
+    background-color: var(--background-color-1);
 }
 
 router-outlet {

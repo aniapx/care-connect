@@ -59,6 +59,8 @@ export class PatientsListComponent implements OnInit {
     private router: Router
   ) {
     this.store.dispatch(AppActions.setPage(this.page));
+
+    this.patients = [...this.patients, ...this.patients, ...this.patients, ...this.patients, ...this.patients, ...this.patients]
   }
 
   ngOnInit(): void {

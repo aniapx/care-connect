@@ -1,3 +1,5 @@
+@import '../2.tools/media-queries';
+
 $primary-color-light-1: #235ee8;
 $primary-color-light-2: #4f7eed;
 $primary-color-light-3: #658eef;
@@ -16,8 +18,11 @@ $secondary-color-light-6: #b9eff2;
 $secondary-color-light-7: #caf3f5;
 $secondary-color-light-8: #dcf7f8;
 
-$background-color-light-1: #ffffff;
+$background-color-light-1: #f2f5fa;
 $background-color-light-2: #f6f7f8;
+
+$background-color-light-mobile-1: #ffffff;
+$background-color-light-mobile-2: #f6f7f8;
 
 $neutral-color-1: #171822;
 $neutral-color-2: #272b30;
@@ -26,3 +31,4 @@ $neutral-color-4: #878ea1;
 $neutral-color-5: #828a9d;
 $neutral-color-6: #e4e9ef;
 $neutral-color-7: #f9fafc;
+$neutral-color-8: #ffffff;

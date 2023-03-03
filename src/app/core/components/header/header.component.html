@@ -1,9 +1,9 @@
-<header *ngIf="page$ | async as page">
-    <div>
+<header *ngIf="page$ | async as page" class="header">
+    <div class="header__title">
         <i class="{{page.icon}} icon"></i>
         <span>{{page.title}}</span>
     </div>
-    <div>
+    <div class="header__actions">
         <input class="searchbox form-control" placeholder="Search" />
         <button class="btn btn--circle btn--primary">
             <i class="fas fa-add"></i>

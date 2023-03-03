@@ -71,7 +71,7 @@
     border-spacing: 0 8px;
 
     th {
-        background-color: #f2f5fa;
+        background-color: var(--background-color-1);
         padding: 8px;
         color: #999;
         font-size: 14px;
@@ -87,12 +87,13 @@
         }
     }
 
-    tr {
-        background-color: var(--background-color-1);
+    tbody tr {
+        background-color: var(--neutral-color-8);
         border-radius: 8px;
+        box-shadow: 1px 1px 4px #ddd;
 
         &:hover {
-            box-shadow: 2px 2px 8px #ddd;;
+            box-shadow: 2px 2px 8px #ccc;;
         }
     }
 
@@ -125,9 +126,16 @@
         padding: 16px;
     }
 
-    &__basic,
-    &__number {
+    &__basic {
         display: table-cell;
+    }
+
+    &__number {
+        display: none; 
+        
+        @include media('sm') {
+            display: table-cell;
+        }
     }
 
     &__next-appt {
@@ -163,9 +171,16 @@
         width: 16px;
     }
 
-    &__basic,
-    &__number {
+    &__basic {
         display: table-cell;
+    }
+
+    &__number {
+        display: none; 
+        
+        @include media('sm') {
+            display: table-cell;
+        }
     }
 
     &__next-appt {

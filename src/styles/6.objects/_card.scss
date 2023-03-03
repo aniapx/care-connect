@@ -1,10 +1,17 @@
+@import '../2.tools/media-queries';
+
 .card {
-    background-color: var(--background-color-1);
+    background-color: var(--neutral-color-8);
     border-radius: var(--base-spacing);
     border: none;
     display: flex;
     flex-direction: column;
     padding: calc(var(--base-spacing) * 2);
+    box-shadow: 2px 2px 8px #ddd;
+
+    @include media('sm') {
+        box-shadow: none;
+    }
 
     &__header {
         font-weight: var(--font-weight-semibold);
