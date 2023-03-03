@@ -1,17 +1,20 @@
-<nav class="navigation">
-  <div class="navigation__logo">
-    <i class="fa-solid fa-user-doctor"></i>
-    <span>CareConnect</span>
+<nav class="navigation" [ngClass]="{'navigation--expanded': isNavigationExpanded}">
+  <div class="navigation__header">
+    <div class="navigation__logo">
+      <i class="fa-solid fa-user-doctor"></i>
+      <span>CareConnect</span>
+    </div>
   </div>
   <div class="navigation__links">
-      <a *ngFor="let route of routes" class="navigation__link" [routerLink]="route.link" [ngClass]="{'desktop-only': !route.isMobile}">
-        <i class="{{route.icon}}"></i>
-        <span>{{route.title}}</span>
-      </a>
-      <a class="navigation__link mobile-only">
-        <i class="fa-solid fa-user"></i>
-        <span>Profile</span>
-      </a>
+    <a *ngFor="let route of routes" class="navigation__link" [routerLink]="route.link"
+      [ngClass]="{'desktop-only': !route.isMobile}">
+      <i class="{{route.icon}}"></i>
+      <span>{{route.title}}</span>
+    </a>
+    <a class="navigation__link mobile-only">
+      <i class="fa-solid fa-user"></i>
+      <span>Profile</span>
+    </a>
   </div>
   <div class="navigation__profile">
     <i class="fa-solid fa-id-card-clip"></i>

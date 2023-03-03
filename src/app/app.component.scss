@@ -14,12 +14,16 @@
     padding: 0;
 
     @include media('md') {
-        grid-template-columns: 260px auto;
+        grid-template-columns: 80px auto;
         grid-template-rows: calc(var(--base-spacing) * 8) auto;
 
         grid-template-areas:
             "navigation header"
             "navigation main";
+    }
+
+    @include media('lg') {
+        grid-template-columns: 260px auto;
     }
 }
 

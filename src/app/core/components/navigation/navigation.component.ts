@@ -14,4 +14,10 @@ export class NavigationComponent {
     { title: 'Finances', link: '', icon: 'fa-solid fa-wallet', isMobile: false },
     { title: 'Settings', link: '', icon: 'fa-solid fa-gear', isMobile: true },
   ];
+
+  public isNavigationExpanded: boolean = false;
+
+  public onNavigationExpandClick(): void {
+    this.isNavigationExpanded = !this.isNavigationExpanded;
+  }
 }

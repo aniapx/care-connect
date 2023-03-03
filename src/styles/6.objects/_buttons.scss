@@ -34,6 +34,20 @@
         }
     }
 
+    &--neutral {
+        background-color: var(--background-color-1);
+        color: var(--neutral-color-4) !important;
+        border: 1px solid var(--neutral-color-6);
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: var(--neutral-color-7) !important;
+            color: var(--neutral-color-4) !important;
+            border: 1px solid var(--neutral-color-6);
+        }
+    }
+
     &--more {
         height: calc(var(--base-spacing) * 4);
         border-radius: calc(var(--base-spacing) * 2);
