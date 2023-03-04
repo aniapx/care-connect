@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class NavigationComponent {
   public routes: { title: string, link: string, icon: string, isMobile: boolean }[] = [
     { title: 'Home', link: '', icon: 'fa-solid fa-house', isMobile: true },
-    { title: 'Calendar', link: '', icon: 'fa-solid fa-calendar', isMobile: true },
+    { title: 'Calendar', link: 'calendar', icon: 'fa-solid fa-calendar', isMobile: true },
     { title: 'Patients list', link: '/patients-list', icon: 'fa-solid fa-user', isMobile: false },
     { title: 'Messages', link: '', icon: 'fa-solid fa-message', isMobile: true },
     { title: 'Finances', link: '', icon: 'fa-solid fa-wallet', isMobile: false },

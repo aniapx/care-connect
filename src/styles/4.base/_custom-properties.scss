@@ -49,7 +49,7 @@
 
     --base-spacing: #{$base-padding};
 
-    
+
     @include media('sm') {
         --background-color-1: #{$background-color-light-1};
         --background-color-2: #{$background-color-light-2};

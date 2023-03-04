@@ -3,11 +3,14 @@
         <ul class="nav nav-pills">
             <li class="nav-item">
                 <button class="nav-link" [ngClass]="{'active': activeTab === 'upcoming'}"
-                    (click)="onTabClick('upcoming')">Upcoming Appointments</button>
+                    (click)="onTabClick('upcoming')">
+                    Upcoming Appointments
+                </button>
             </li>
             <li class="nav-item">
-                <button class="nav-link" [ngClass]="{'active': activeTab === 'past'}" (click)="onTabClick('past')">Past
-                    Appointments</button>
+                <button class="nav-link" [ngClass]="{'active': activeTab === 'past'}" (click)="onTabClick('past')">
+                    Past Appointments
+                </button>
             </li>
         </ul>
     </div>
@@ -15,37 +18,37 @@
         <div class="timeline__header">
             <h2>Root Canal Treatment</h2>
             <button class="btn btn--secondary">
-                <i class="fa-solid fa-chevron-up"></i>
-                Show Previous Treatment
+                <i class="btn__icon fa-solid fa-chevron-up"></i>
+                <span class="btn__text">Show Previous Treatment</span>
             </button>
         </div>
         <div class="timeline__content">
             <ul>
-                <li class="timeline__item ">
+                <li class="timeline__item">
                     <div class="timeline__item__icon"><span></span></div>
                     <div class="appointment">
                         <div class="appointment__date">
                             <span>{{'2019-11-26' | date:'dd MMM yyyy'}}</span>
                             <span>09:00 - 10:00</span>
                         </div>
-                        <div class="divider divider--vertical"></div>
-                        <div class="appointment__data">
+                        <div class="divider divider--vertical desktop-only"></div>
+                        <div class="appointment__treatment appointment__data">
                             <span class="appointment__data__label">Treatment</span>
                             <span class="appointment__data__value">Open Access</span>
                         </div>
-                        <div class="divider divider--vertical"></div>
-                        <div class="appointment__data">
+                        <div class="divider divider--vertical desktop-only"></div>
+                        <div class="appointment__doctor appointment__data">
                             <span class="appointment__data__label">Doctor</span>
                             <span class="appointment__data__value">Dr. Adam Hodge</span>
                         </div>
-                        <div class="divider divider--vertical"></div>
-                        <div class="appointment__data">
+                        <div class="divider divider--vertical desktop-only"></div>
+                        <div class="appointment__nurse appointment__data">
                             <span class="appointment__data__label">Nurse</span>
                             <span class="appointment__data__value">Mary White</span>
                         </div>
-                        <button class="btn">
-                            <i class="fa-solid fa-file-lines"></i>
-                            Note
+                        <button class="btn btn--transparent appointment__note">
+                            <i class="btn__icon fa-solid fa-file-lines"></i>
+                            <span class="btn__text always-visible">Note</span>
                         </button>
                     </div>
                 </li>
@@ -56,24 +59,24 @@
                             <span>{{'2019-11-26' | date:'dd MMM yyyy'}}</span>
                             <span>09:00 - 10:00</span>
                         </div>
-                        <div class="divider divider--vertical"></div>
-                        <div class="appointment__data">
+                        <div class="divider divider--vertical desktop-only"></div>
+                        <div class="appointment__treatment appointment__data">
                             <span class="appointment__data__label">Treatment</span>
                             <span class="appointment__data__value">Open Access</span>
                         </div>
-                        <div class="divider divider--vertical"></div>
-                        <div class="appointment__data">
+                        <div class="divider divider--vertical desktop-only"></div>
+                        <div class="appointment__doctor appointment__data">
                             <span class="appointment__data__label">Doctor</span>
                             <span class="appointment__data__value">Dr. Adam Hodge</span>
                         </div>
-                        <div class="divider divider--vertical"></div>
-                        <div class="appointment__data">
+                        <div class="divider divider--vertical desktop-only"></div>
+                        <div class="appointment__nurse appointment__data">
                             <span class="appointment__data__label">Nurse</span>
                             <span class="appointment__data__value">Mary White</span>
                         </div>
-                        <button class="btn">
-                            <i class="fa-solid fa-file-lines"></i>
-                            Note
+                        <button class="btn btn--transparent appointment__note">
+                            <i class="btn__icon fa-solid fa-file-lines"></i>
+                            <span class="btn__text always-visible">Note</span>
                         </button>
                     </div>
                 </li>

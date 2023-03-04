@@ -1,0 +1,9 @@
+.breadcrumb {
+    --bs-breadcrumb-divider: '>';
+    --bs-breadcrumb-font-size: 14px;
+
+    li,
+    a {
+        font-size: var(--bs-breadcrumb-font-size);
+    }
+}
