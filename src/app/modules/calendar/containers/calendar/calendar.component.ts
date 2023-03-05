@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, TemplateRef, ViewChild } from '@angular/core';
 import { CalendarView, CalendarEvent, CalendarEventAction, CalendarEventTimesChangedEvent, CalendarDateFormatter } from 'angular-calendar';
-import { subDays, startOfDay, addDays, endOfMonth, addHours, isSameMonth, isSameDay, endOfDay, endOfWeek, startOfWeek } from 'date-fns';
+import { subDays, startOfDay, addDays, endOfMonth, addHours, isSameMonth, isSameDay, endOfDay, endOfWeek, startOfWeek, subHours } from 'date-fns';
 import { Subject } from 'rxjs';
 import { EventColor } from 'calendar-utils';
 import { Store } from '@ngrx/store';
@@ -10,15 +10,15 @@ import { CustomDateFormatter } from '../../utils/custom-date-formatter.provider'
 const colors: Record<string, EventColor> = {
   red: {
     primary: '#ad2121',
-    secondary: '#FAE3E3',
+    secondary: '#ffffff',
   },
   blue: {
-    primary: '#1e90ff',
-    secondary: '#D1E8FF',
+    primary: '#d70e47',
+    secondary: '#ffffff',
   },
   yellow: {
-    primary: '#e3bc08',
-    secondary: '#FDF1BA',
+    primary: '#f3ac5f',
+    secondary: '#ffffff',
   },
 };
 
@@ -77,11 +77,10 @@ export class CalendarComponent {
       actions: this.actions,
     },
     {
-      start: subDays(endOfMonth(new Date()), 3),
-      end: addDays(endOfMonth(new Date()), 3),
-      title: 'A long event that spans 2 months',
+      start: subHours(addDays(new Date(), 1), 3),
+      end: subHours(addDays(new Date(), 1), 1),
+      title: 'Short Meeting',
       color: { ...colors['blue'] },
-      allDay: true,
     },
     {
       start: addHours(startOfDay(new Date()), 2),

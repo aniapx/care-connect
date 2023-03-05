@@ -1,6 +1,7 @@
 <mwl-calendar-week-view [viewDate]="viewDate" [events]="events" [refresh]="refresh" [excludeDays]="excludeDays"
     [currentTimeMarkerTemplate]="currentTimeMarkerTemplate" [hourSegments]="1" [dayStartHour]="8" [dayEndHour]="20"
-    (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
+    (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)"
+    [hourSegments]="3" [weekStartsOn]="1">
 </mwl-calendar-week-view>
 
 <ng-template #currentTimeMarkerTemplate let-columnDate="columnDate" let-dayStartHour="dayStartHour"

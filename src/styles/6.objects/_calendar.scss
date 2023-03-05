@@ -1,24 +1,12 @@
 .cal-week-view {
     background-color: var(--background-color-1);
-
-    .cal-day-headers {}
-}
-
-// .cal-week-view .cal-current-time-marker {
-//     height: 2px;
-//     background-color: var(--primary-color-1);
-//     background-size: 400% 400%;
-// }
-
-
-
-.cal-hour,
-.cal-hour-start {
-    height: 100px !important;
-}
-
-.cal-week-view {
     border-top: none;
+
+    .cal-current-time-marker {
+        height: 2px;
+        background-color: var(--primary-color-1);
+        background-size: 400% 400%;
+    }
 
     .cal-time {
         font-weight: 400;
@@ -68,5 +56,30 @@
         .cal-hour:not(:last-child) .cal-hour-segment {
             border-bottom: none;
         }
+    }
+
+    .cal-time-events .cal-day-column {
+        margin-right: 8px;
+    }
+
+    .cal-hour:not(:first-child) {
+        width: calc(100% + 8px);
+    }
+
+    .cal-time-events .cal-event,
+    .cal-ends-within-day .cal-event {
+        border-bottom: 0;
+        border-right: 0;
+        border-left: 0;
+        border-top-width: 4px;
+        box-shadow: 2px 2px 4px #ccc;
+    }
+
+    .cal-hour-segment {
+        border-bottom: none !important;
+    }
+
+    .cal-hour {
+        border-bottom: 1px solid #ccc;
     }
 }
