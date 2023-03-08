@@ -6,19 +6,20 @@ import { EventColor } from 'calendar-utils';
 import { Store } from '@ngrx/store';
 import * as AppActions from '@core/store';
 import { CustomDateFormatter } from '../../utils/custom-date-formatter.provider';
+import { CustomCalendarEvent } from './custom-calendar-event';
 
 const colors: Record<string, EventColor> = {
   red: {
     primary: '#ad2121',
-    secondary: '#ffffff',
+    secondary: '',
   },
   blue: {
     primary: '#d70e47',
-    secondary: '#ffffff',
+    secondary: '',
   },
   yellow: {
     primary: '#f3ac5f',
-    secondary: '#ffffff',
+    secondary: '',
   },
 };
 
@@ -26,8 +27,8 @@ const colors: Record<string, EventColor> = {
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./calendar.component.scss']
-  , providers: [
+  styleUrls: ['./calendar.component.scss'],
+  providers: [
     {
       provide: CalendarDateFormatter,
       useClass: CustomDateFormatter,
@@ -69,23 +70,27 @@ export class CalendarComponent {
 
   refresh = new Subject<void>();
 
-  events: CalendarEvent[] = [
-    {
-      start: startOfDay(new Date(-3)),
-      title: 'An event with no end date',
-      color: { ...colors['yellow'] },
-      actions: this.actions,
-    },
+  events: CustomCalendarEvent[] = [
     {
       start: subHours(addDays(new Date(), 1), 3),
       end: subHours(addDays(new Date(), 1), 1),
-      title: 'Short Meeting',
+      title: 'Dave',
+      subtitle: 'Root Canal',
+      isPatientMember: false,
       color: { ...colors['blue'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
     },
     {
-      start: addHours(startOfDay(new Date()), 2),
-      end: addHours(new Date(), 2),
-      title: 'A draggable and resizable event',
+      start: addHours(startOfDay(new Date()), 9),
+      end: addHours(startOfDay(new Date()), 11),
+      subtitle: 'Scaling',
+      isPatientMember: true,
+      title: 'Willy',
       color: { ...colors['yellow'] },
       actions: this.actions,
       resizable: {
@@ -133,6 +138,8 @@ export class CalendarComponent {
       if (iEvent === event) {
         return {
           ...event,
+          isPatientMember: iEvent.isPatientMember,
+          subtitle: iEvent.subtitle,
           start: newStart,
           end: newEnd,
         };
@@ -144,6 +151,7 @@ export class CalendarComponent {
 
   handleEvent(action: string, event: CalendarEvent): void {
     this.modalData = { event, action };
+    console.log({ event, action });
     // this.modal.open(this.modalContent, { size: 'lg' });
   }
 
@@ -152,6 +160,8 @@ export class CalendarComponent {
       ...this.events,
       {
         title: 'New event',
+        subtitle: 'New event',
+        isPatientMember: false,
         start: startOfDay(new Date()),
         end: endOfDay(new Date()),
         color: colors['red'],

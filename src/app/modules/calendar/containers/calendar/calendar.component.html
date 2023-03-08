@@ -1,11 +1,43 @@
 <mwl-calendar-week-view [viewDate]="viewDate" [events]="events" [refresh]="refresh" [excludeDays]="excludeDays"
     [currentTimeMarkerTemplate]="currentTimeMarkerTemplate" [hourSegments]="1" [dayStartHour]="8" [dayEndHour]="20"
-    (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)"
-    [hourSegments]="3" [weekStartsOn]="1">
+    [eventTemplate]="customEventTemplate" (eventClicked)="handleEvent('Clicked', $event.event)"
+    (eventTimesChanged)="eventTimesChanged($event)" [hourSegments]="3" [weekStartsOn]="1">
 </mwl-calendar-week-view>
 
 <ng-template #currentTimeMarkerTemplate let-columnDate="columnDate" let-dayStartHour="dayStartHour"
     let-dayStartMinute="dayStartMinute" let-dayEndHour="dayEndHour" let-dayEndMinute="dayEndMinute"
     let-isVisible="isVisible" let-topPx="topPx">
     <div class="cal-current-time-marker" *ngIf="isVisible" [style.top.px]="topPx"></div>
+</ng-template>
+
+<ng-template #customEventTemplate let-weekEvent="weekEvent" let-localeWeekStartsOn="localeWeekStartsOn">
+    <div class="calendar-event" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+        data-bs-content="Top popover">
+        <div class="content">
+            <div class="header">
+                <div class="title">
+                    {{weekEvent.event.title}}
+                </div>
+                <div class="subtitle">
+                    {{weekEvent.event.subtitle}}
+                </div>
+            </div>
+            <div class="footer">
+                <div class="time">
+                    {{weekEvent.event.start | date:'HH:mm'}} - {{weekEvent.event.end | date:'HH:mm'}}
+                </div>
+                <div *ngIf="weekEvent.event.isPatientMember" class="member">
+                    Member
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <button class="btn actions__btn">
+                <i class="fa-solid fa-edit"></i>
+            </button>
+            <button class="btn actions__btn">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </div>
+    </div>
 </ng-template>
