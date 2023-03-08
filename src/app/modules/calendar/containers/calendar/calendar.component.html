@@ -1,3 +1,41 @@
+<div class="calendar-header">
+    <div class="calendar-header__actions">
+        <button class="btn btn--neutral" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"
+            (viewDateChange)="closeOpenMonthViewDay()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="btn btn--neutral">
+            <span>
+                {{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}
+            </span>
+        </div>
+        <button class="btn btn--neutral" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate"
+            (viewDateChange)="closeOpenMonthViewDay()">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+    <div class="calendar-header__actions">
+        <button class="btn btn--neutral">
+            <i class="fa-solid fa-user"></i>
+            <span class="btn__text">Request approval</span>
+        </button>
+        <button class="btn btn--neutral">
+            <i class="btn__icon fa-solid fa-arrows-rotate"></i>
+        </button>
+        <button class="btn btn--neutral">
+            <i class="btn__icon fa-solid fa-print"></i>
+        </button>
+        <button class="btn btn--neutral">
+            <i class="btn__icon fa-solid fa-filter"></i>
+            <span class="btn__text">Filter</span>
+        </button>
+        <button class="btn btn--neutral">
+            <i class="btn__icon fa-solid fa-sliders"></i>
+            <span class="btn__text">Schedule</span>
+        </button>
+    </div>
+</div>
+
 <mwl-calendar-week-view [viewDate]="viewDate" [events]="events" [refresh]="refresh" [excludeDays]="excludeDays"
     [currentTimeMarkerTemplate]="currentTimeMarkerTemplate" [hourSegments]="1" [dayStartHour]="8" [dayEndHour]="20"
     [eventTemplate]="customEventTemplate" (eventClicked)="handleEvent('Clicked', $event.event)"
@@ -12,7 +50,7 @@
 
 <ng-template #customEventTemplate let-weekEvent="weekEvent" let-localeWeekStartsOn="localeWeekStartsOn">
     <div class="calendar-event" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
-        data-bs-content="Top popover">
+        data-bs-content="Top popover" id="event-{{weekEvent.event.id}}">
         <div class="content">
             <div class="header">
                 <div class="title">
@@ -23,7 +61,7 @@
                 </div>
             </div>
             <div class="footer">
-                <div class="time">
+                <div class="time" *ngIf="!weekEvent.event.isShort">
                     {{weekEvent.event.start | date:'HH:mm'}} - {{weekEvent.event.end | date:'HH:mm'}}
                 </div>
                 <div *ngIf="weekEvent.event.isPatientMember" class="member">

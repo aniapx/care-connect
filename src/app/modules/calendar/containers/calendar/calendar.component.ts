@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, TemplateRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, TemplateRef, ViewChild, ElementRef } from '@angular/core';
 import { CalendarView, CalendarEvent, CalendarEventAction, CalendarEventTimesChangedEvent, CalendarDateFormatter } from 'angular-calendar';
 import { subDays, startOfDay, addDays, endOfMonth, addHours, isSameMonth, isSameDay, endOfDay, endOfWeek, startOfWeek, subHours } from 'date-fns';
 import { Subject } from 'rxjs';
@@ -7,6 +7,7 @@ import { Store } from '@ngrx/store';
 import * as AppActions from '@core/store';
 import { CustomDateFormatter } from '../../utils/custom-date-formatter.provider';
 import { CustomCalendarEvent } from './custom-calendar-event';
+
 
 const colors: Record<string, EventColor> = {
   red: {
@@ -38,6 +39,8 @@ const colors: Record<string, EventColor> = {
 export class CalendarComponent {
 
   @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any> | undefined;
+  @ViewChild('myModal') myModal: ElementRef | undefined;
+
 
   view: CalendarView = CalendarView.Week;
 
@@ -72,8 +75,10 @@ export class CalendarComponent {
 
   events: CustomCalendarEvent[] = [
     {
+      id: 1,
       start: subHours(addDays(new Date(), 1), 3),
       end: subHours(addDays(new Date(), 1), 1),
+      isShort: false,
       title: 'Dave',
       subtitle: 'Root Canal',
       isPatientMember: false,
@@ -86,12 +91,30 @@ export class CalendarComponent {
       draggable: true,
     },
     {
+      id: 2,
       start: addHours(startOfDay(new Date()), 9),
       end: addHours(startOfDay(new Date()), 11),
+      isShort: false,
       subtitle: 'Scaling',
       isPatientMember: true,
       title: 'Willy',
       color: { ...colors['yellow'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      id: 3,
+      start: addHours(startOfDay(addDays(new Date(), 2)), 10),
+      end: addHours(startOfDay(addDays(new Date(), 2)), 11),
+      isShort: true,
+      title: 'Dave',
+      subtitle: 'Root Canal',
+      isPatientMember: false,
+      color: { ...colors['blue'] },
       actions: this.actions,
       resizable: {
         beforeStart: true,
@@ -142,6 +165,7 @@ export class CalendarComponent {
           subtitle: iEvent.subtitle,
           start: newStart,
           end: newEnd,
+          isShort: iEvent.isShort
         };
       }
       return iEvent;
@@ -151,8 +175,6 @@ export class CalendarComponent {
 
   handleEvent(action: string, event: CalendarEvent): void {
     this.modalData = { event, action };
-    console.log({ event, action });
-    // this.modal.open(this.modalContent, { size: 'lg' });
   }
 
   addEvent(): void {
@@ -164,6 +186,7 @@ export class CalendarComponent {
         isPatientMember: false,
         start: startOfDay(new Date()),
         end: endOfDay(new Date()),
+        isShort: false,
         color: colors['red'],
         draggable: true,
         resizable: {

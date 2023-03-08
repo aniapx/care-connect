@@ -1,0 +1,18 @@
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+
+    &__actions {
+        display: flex;
+        column-gap: 4px;
+    }
+
+    .btn {
+        --bs-btn-bg: var(--neutral-color-8);
+
+        span {
+            font-size: 14px;
+        }
+    }
+}
