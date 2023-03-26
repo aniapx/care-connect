@@ -88,6 +88,14 @@ export class PatientsListComponent implements OnInit {
     }
   }
 
+  public onPrintClick(): void {
+
+  }
+
+  public onFilterClick(): void {
+
+  }
+
   private sortByDate(a: string | undefined, b: string | undefined): number {
     const dateA = a ? new Date(a) : undefined;
     const dateB = b ? new Date(b) : undefined;
@@ -102,7 +110,7 @@ export class PatientsListComponent implements OnInit {
     }
   }
 
-  sortByString(a: string, b: string): number {
+  private sortByString(a: string, b: string): number {
     return a.localeCompare(b);
   }
 }

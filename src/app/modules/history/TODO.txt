@@ -1,2 +1,0 @@
-Medical history page: 
-This page displays the user's medical history, including their past appointments, diagnoses, medications, and test results.

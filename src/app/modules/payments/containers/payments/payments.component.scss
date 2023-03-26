@@ -1,0 +1,15 @@
+@import '../../../../../styles/2.tools/media-queries';
+
+.payments {
+    display: flex;
+    flex-direction: column;
+
+    @include media('sm') {
+        flex-direction: row;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+    }
+}

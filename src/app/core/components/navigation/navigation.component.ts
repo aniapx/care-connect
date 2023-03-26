@@ -11,7 +11,7 @@ export class NavigationComponent {
     { title: 'Calendar', link: 'calendar', icon: 'fa-solid fa-calendar', isMobile: true },
     { title: 'Patients list', link: '/patients-list', icon: 'fa-solid fa-user', isMobile: false },
     { title: 'Messages', link: '', icon: 'fa-solid fa-message', isMobile: true },
-    { title: 'Finances', link: '', icon: 'fa-solid fa-wallet', isMobile: false },
+    { title: 'Payment Information', link: '/payments', icon: 'fa-solid fa-wallet', isMobile: false },
     { title: 'Settings', link: '', icon: 'fa-solid fa-gear', isMobile: true },
   ];
 
