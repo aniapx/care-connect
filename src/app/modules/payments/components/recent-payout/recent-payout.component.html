@@ -1,7 +1,25 @@
 <h2>Recent Payout</h2>
 
-<div class="card">
-    <div class="card__header"></div>
-    <div class="card__content"></div>
-    <div class="card__footer"></div>
+<div>
+    <table class="payments">
+        <thead class="payments__header">
+            <th>Date</th>
+            <th>Paid</th>
+            <th>Method</th>
+            <th>Notes</th>
+            <th>Amount</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let payment of payments" class="payment">
+                <td class="payment__date">{{payment.date | date:'MMM dd, YYYY'}}</td>
+                <td class="payment__paid">
+                    <span *ngIf="payment.date" class="paid">Paid</span>
+                    <span *ngIf="!payment.date" class="not-paid">Not paid</span>
+                </td>
+                <td class="payment__method">{{payment.method}}</td>
+                <td class="payment__notes">{{payment.notes}}</td>
+                <td class="payment__amount">${{payment.amount}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

@@ -1,0 +1,55 @@
+.payments {
+    border-radius: 8px;
+
+    &__header {
+        background-color: #ffffff;
+        border-radius: 8px 8px 0 0;
+
+        >th {
+            padding: 16px;
+        }
+    }
+
+    tbody {
+        border-radius: 0 0 16px 16px;
+    }
+
+    .payment {
+        background-color: #ffffff;
+
+        &:nth-child(2) {
+            background-color: #eeeeee;
+        }
+
+        &:last-child {
+            border-radius: 0 0 8px 8px;
+
+            >td:first-child {
+                border-radius: 0 0 0 8px;
+            }
+
+            >td:last-child {
+                border-radius: 0 0 8px 0;
+            }
+        }
+
+        >td {
+            padding: 16px;
+            font-size: 14px;
+        }
+
+        &__paid {
+            .paid {
+                padding: 2px 8px;
+                border-radius: 8px;
+                background-color: green;
+            }
+
+            .not-paid {
+                padding: 2px 8px;
+                border-radius: 8px;
+                background-color: red;
+            }
+        }
+    }
+}

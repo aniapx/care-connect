@@ -1,7 +1,16 @@
 <h2>Recent Treatment</h2>
 
-<div class="card">
-    <div class="card__header"></div>
-    <div class="card__content"></div>
-    <div class="card__footer"></div>
+<div class="list">
+    <div class="list__item treatment" *ngFor="let treatment of treatments">
+        <div class="treatment__header header">
+            <div class="header__picture" [ngClass]="{'header__picture--empty': !treatment.patientPicture}"></div>
+            <div class="header__patient">{{treatment.patientName}}</div>
+            <div class="header__treatment">{{treatment.name}}</div>
+        </div>
+        <div class="treatment__price">${{treatment.price}}</div>
+        <div class="treatment__date">{{treatment.date | date:'dd MMM yyyy'}}</div>
+        <div class="treatment__actions">
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+    </div>
 </div>

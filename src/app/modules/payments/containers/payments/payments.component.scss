@@ -3,6 +3,7 @@
 .payments {
     display: flex;
     flex-direction: column;
+    padding: 32px;
 
     @include media('sm') {
         flex-direction: row;
@@ -11,5 +12,10 @@
     &__left {
         display: flex;
         flex-direction: column;
+        gap: 16px;
+    }
+
+    &__right {
+        gap: 16px;
     }
 }
