@@ -1,4 +1,4 @@
-<h2>Recent Treatment</h2>
+<h3>Recent Treatment</h3>
 
 <div class="list">
     <div class="list__item treatment" *ngFor="let treatment of treatments">
@@ -9,8 +9,24 @@
         </div>
         <div class="treatment__price">${{treatment.price}}</div>
         <div class="treatment__date">{{treatment.date | date:'dd MMM yyyy'}}</div>
-        <div class="treatment__actions">
-            <i class="fa-solid fa-ellipsis"></i>
+        <div class="data__options">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Open details
+                        </button>
+                        <button class="dropdown-item" type="button">
+                            <i class="fa-solid fa-calendar"></i>
+                            Show in calendar
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

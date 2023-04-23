@@ -3,9 +3,10 @@
 .payments {
     display: flex;
     flex-direction: column;
-    padding: 32px;
+    padding: 16px;
+    gap: 16px;
 
-    @include media('sm') {
+    @include media('md') {
         flex-direction: row;
     }
 
@@ -15,7 +16,5 @@
         gap: 16px;
     }
 
-    &__right {
-        gap: 16px;
-    }
+    &__right {}
 }

@@ -1,5 +1,13 @@
+@import '../../../../../styles/2.tools/media-queries';
+
+h3 {
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
 .payments {
     border-radius: 8px;
+    width: 100%;
 
     &__header {
         background-color: #ffffff;
@@ -17,8 +25,8 @@
     .payment {
         background-color: #ffffff;
 
-        &:nth-child(2) {
-            background-color: #eeeeee;
+        &:nth-child(2n-1) {
+            background-color: #f2f5fa;
         }
 
         &:last-child {
@@ -35,21 +43,50 @@
 
         >td {
             padding: 16px;
-            font-size: 14px;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        &__notes,
+        &__method {
+            display: none;
+
+            @include media('sm') {
+                display: table-cell;
+            }
         }
 
         &__paid {
-            .paid {
+            color: #ffffff;
+            font-weight: 300;
+
+            .paid,
+            .not-paid {
+                font-size: 14px;
                 padding: 2px 8px;
-                border-radius: 8px;
-                background-color: green;
+                border-radius: 4px;
+            }
+
+            .paid {
+                background-color: var(--success-color-1);
             }
 
             .not-paid {
-                padding: 2px 8px;
-                border-radius: 8px;
-                background-color: red;
+                background-color: var(--danger-color-1);
             }
+        }
+    }
+}
+
+.header {
+
+    &__notes,
+    &__method {
+        display: none;
+
+        @include media('sm') {
+            display: table-cell;
         }
     }
 }

@@ -1,13 +1,13 @@
-<h2>Recent Payout</h2>
+<h3>Recent Payout</h3>
 
 <div>
     <table class="payments">
-        <thead class="payments__header">
-            <th>Date</th>
-            <th>Paid</th>
-            <th>Method</th>
-            <th>Notes</th>
-            <th>Amount</th>
+        <thead class="payments__header header">
+            <th class="header__date">Date</th>
+            <th class="header__paid">Paid</th>
+            <th class="header__method">Method</th>
+            <th class="header__notes">Notes</th>
+            <th class="header__amount">Amount</th>
         </thead>
         <tbody>
             <tr *ngFor="let payment of payments" class="payment">
